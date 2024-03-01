@@ -1,0 +1,34 @@
+{
+  "username": "John Claude Van Damme",
+  "phoneNumber": "71534241563788",
+  "accountNumber": "2541233456789933",
+  "money": {
+    "amount": 2000,
+    "isoCode": "KES",
+    "phoneNumber": 8476464
+  },
+  "status": "IN_PROGRESS",
+  "sourceRefId": "23d2c0e68990424139ka431ca3e0250e297",
+  "stringPhoneNumberInList": {
+    "phoneNumber": [
+      "8463635511",
+      "9847626e565"
+    ]
+  },
+  "numericPhoneNumberInList": {
+    "phoneNumber": [
+      8463635511,
+      9847626.0
+    ]
+  },
+  "X-Request-ID": "a9887fce-79a1-11ea-bc55-0242ac130003",
+  "metadata": {
+    "homeAddress": "Amazon Rain Forest",
+    "phoneNumber": "7464655454533",
+    "passportNumber": 895775753,
+    "alternativePhones": [
+      "8463635511",
+      "9847626e565454545454"
+    ]
+  }
+}

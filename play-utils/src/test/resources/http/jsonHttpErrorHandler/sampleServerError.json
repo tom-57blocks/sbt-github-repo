@@ -1,0 +1,11 @@
+{
+  "data": null,
+  "meta": {
+    "errors": [
+      "An internal server error occurred errorId -> 93626399"
+    ],
+    "executionTime": 20,
+    "requestId": "9082fc19-824f-4438-9a52-9362639927b5",
+    "resultCode": "5000"
+  }
+}

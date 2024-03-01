@@ -1,0 +1,12 @@
+{
+  "data": null,
+  "meta": {
+    "errors": [
+      "xyz lmn",
+      "lorem ipsum"
+    ],
+    "executionTime": 89,
+    "requestId": "b5866235-df5e-4cc7-a33a-4efd",
+    "resultCode": "4000"
+  }
+}

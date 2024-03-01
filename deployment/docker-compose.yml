@@ -1,0 +1,41 @@
+version: '3.3'
+services:
+  kafka-and-zookeeper:
+    image: blacktop/kafka:2.6
+    container_name: tools-common-kafka-and-zookeeper
+    ports:
+      - "9092:9092"
+      - "19092:19092"
+      - "2181:2181"
+    environment:
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka-and-zookeeper:9092,CONNECTIONS_FROM_HOST://localhost:19092
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092,CONNECTIONS_FROM_HOST://0.0.0.0:19092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,CONNECTIONS_FROM_HOST:PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_CREATE_TOPICS: "plaintext-tests:1:1,plaintext-tests:1:1,avro-test:1:1"
+
+  schema-registry:
+    image: confluentinc/cp-schema-registry:6.2.2
+    hostname: schema-registry
+    container_name: tools-common-schema-registry
+    depends_on:
+      - kafka-and-zookeeper
+    ports:
+      - '8081:8081'
+    environment:
+      SCHEMA_REGISTRY_HOST_NAME: schema-registry
+      SCHEMA_REGISTRY_LISTENERS: http://0.0.0.0:8081
+      SCHEMA_REGISTRY_KAFKASTORE_SECURITY_PROTOCOL: "PLAINTEXT"
+      SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS: "PLAINTEXT://kafka-and-zookeeper:9092"
+
+  mariadb:
+    image: mariadb:10.7
+    container_name: tools-common-mariadb
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_DATABASE: "test_db"
+    restart: on-failure
+    ports:
+      - "3307:3306"

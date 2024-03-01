@@ -1,0 +1,11 @@
+{
+  "data": null,
+  "meta": {
+    "errors": [
+      "obj.telephone => error.path.missing"
+    ],
+    "executionTime": -1,
+    "requestId": "e5e57c3e-9d52-46ae-b67a-6dccb5a0b15d",
+    "resultCode": "4000"
+  }
+}

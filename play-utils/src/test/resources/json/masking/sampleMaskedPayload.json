@@ -1,0 +1,25 @@
+{
+  "username": "John Claude Van Damme",
+  "phoneNumber": "************",
+  "accountNumber": "2541233456789933",
+  "money": {
+    "amount": 2000,
+    "isoCode": "KES",
+    "phoneNumber": "************"
+  },
+  "status": "IN_PROGRESS",
+  "sourceRefId": "23d2c0e68990424139ka431ca3e0250e297",
+  "stringPhoneNumberInList": {
+    "phoneNumber": "************"
+  },
+  "numericPhoneNumberInList": {
+    "phoneNumber": "************"
+  },
+  "X-Request-ID": "************",
+  "metadata": {
+    "homeAddress": "************",
+    "phoneNumber": "************",
+    "passportNumber": 895775753,
+    "alternativePhones": "************"
+  }
+}

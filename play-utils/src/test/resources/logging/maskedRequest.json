@@ -1,0 +1,22 @@
+{
+  "path": "/user/search",
+  "queryParameters": {
+    "telephone": "************",
+    "date": [
+      "2022-02-17"
+    ]
+  },
+  "body": {
+    "telephone": "************",
+    "name": "lex",
+    "idNumber": "9872"
+  },
+  "headers": {
+    "X-Password": [
+      "xyz"
+    ],
+    "X-Request-Id": [
+      "abce"
+    ]
+  }
+}

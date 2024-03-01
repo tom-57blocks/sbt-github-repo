@@ -1,0 +1,14 @@
+{
+  "data": {
+    "id": 160
+  },
+  "meta": {
+    "errors": [
+      "name.required",
+      "age.invalid"
+    ],
+    "executionTime": 1834,
+    "requestId": "411d6fe6-5065-463a-9708-531e80dc4379",
+    "resultCode": "2000"
+  }
+}

@@ -1,0 +1,20 @@
+<!-- https://www.playframework.com/documentation/latest/SettingsLogger -->
+
+<configuration>
+  <appender name="PLAINTEXT_STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <withJansi>true</withJansi>
+    <encoder>
+      <charset>UTF-8</charset>
+      <pattern>
+        %d{yyyy-MM-dd HH:mm:ss} %highlight(%-5level) %cyan(%logger{36}) %magenta(%X{akkaSource})
+        %msg%n
+      </pattern>
+    </encoder>
+  </appender>
+
+  <logger name="slick.jdbc" level="OFF"/>
+
+  <root level="OFF">
+    <appender-ref ref="PLAINTEXT_STDOUT"/>
+  </root>
+</configuration>
